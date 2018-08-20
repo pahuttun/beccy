@@ -2,128 +2,143 @@
 
 When I was a kid I had Spectrum ZX and I was spending all my evenings developing little games and software. Fast forward 30 years. "Hey, I should create a fun little game for Spectrum", I was thinking while pooping. It cannot be so hard!
 
-Well, maybe it wasn't so hard, but I was a bit frustrated to get things started and rolling. What are the prerequisities to get my first Hello World program done? What kind of software I need? How can I write software with my Mac and then run it in Spectrum emulator?
+Well, maybe it wasn't so hard, but I was a bit frustrated to get things started and rolling. What are the prerequisities to get my first Hello World program done? What kind of software I need? How do I avoid writing the software with the horrible keyboard layout Spectrum has? How to create and run tape files?
 
 This project will answer these questions.
 
-## Getting Started
+## Install the required software
 
-I'm a Mac user but decided to use Ubuntu 18.04 LTS for this project. The main reason is that although there are Mac ports of the emulator we will be using, it seems that the latest version is currently Linux only.
+The following chapter will walk you through the installation of required software to run your own Spectrum programs.
 
-Notice: All instructions are written assuming that you have Ubuntu 18.04 LTS. Your mileage might vary with other distros.
+There are instructions for Linux (Ubuntu 18.04 LTS used) and Mac (High Sierra used).
 
-### Prerequisites
+The rest of the instructions assume that you are using Mac version. Most probably the Linux version is quite similar.
 
-List of prerequisities:
-- Ubuntu 18.04 LTS or similar
-- Spectrum emulator
-	- Fuse (1.5.6 used)
-	- Fuse utils (1.4.3 used)
-	- libspectrum (1.4.4 used)
+### Install the prerequisites: Linux
 
-Fear not, you can find the installation instructions below.
+List of prerequisities we will be installing next:
+- libspectrum (1.4.4 used)
+- Fuse (1.5.6 used)
+- Fuse utils (1.4.3 used)
 
-#### Optional: Install latest Ubuntu for Mac
+If you want to use virtualized linux, [read these instructions](docs/virtual-linux.md)
 
-Installing virtualized Linux for Mac is quite straightforward and I won't go into the details.
+#### Libspectrum
 
-1) Install latest [Virtualbox](https://www.virtualbox.org/)
-2) Create virtual machine
-	- Name: *Whatever you choose*
-	- Type: Linux
-	- Version: Ubuntu (64-bit)
-	- Memory: more than the default (I use half of my computer's memory)
-	- Create a virtual hard disk now
-		- VDI
-		- Dynamically allocated
-		- At least 30 GB
-3) Adjust virtual machine settings
-	- Go to virtual machine settings
-	- General => Advanced
-		- Shared Clipboard: Bidirectional
-		- Drag'n'Drop: Bidirectional
-	- Display
-		- Video memory: 128 MB
-		- Enable 3D Acceleration
-4) Download latest [Ubuntu LTS ISO](https://www.ubuntu.com/download/desktop)
-5) Attach the ISO to the virtual machine
-	- Go to virtual machine settings
-	- Storage
-		- Click picture of DVD under the Controller: IDE
-		- Click picture of DVD near the Opical Drive text and select the Ubuntu ISO you downloaded
-6) Power on and good luck! Obey the Linux instructions for installation
-	- Notice: These instructions assume that you do the Minimal installation when it asks. If you plan to use this virtual Linux for other user than Spectrum emulator development, do the Normal installation
+Install the latest version of the Libspectrum
+- [Download latest code](http://fuse-emulator.sourceforge.net/libspectrum.php)
+- Unpack the tar
+- Read the README for up-to-date installation instructions
+- Install
+	- `./configure`
+	- `make`
 
-#### Optional: Prerequirements of Spectrum emulator for fresh Ubuntu installs
+**Problems I encountered**
 
-If you have just installed the Ubuntu with minimal installation, there are some tasks you need to do before you can install the Spectrum emulator.
+`configure: error: Glib not found`
+- Run: `./configure --with-fake-glib`
 
-List of prerequirements:
-- 
+#### Fuse utils
 
-#### Install Spectrum emulator Fuse and required 
+Install the latest version of the Fuse utils
+- [Download latest code](https://sourceforge.net/projects/fuse-emulator/files/fuse-utils/)
+- Unpack the tar
+- Read the README for up-to-date installation instructions
+- Install
+	- `./configure`
+	- `make`
 
-### Installing
+#### Fuse
 
-A step by step series of examples that tell you how to get a development env running
+Install the latest version of the Fuse
+- [Download latest code](https://sourceforge.net/projects/fuse-emulator/files/fuse/)
+- Unpack the tar
+- Read the README for up-to-date installation instructions
+- Install
+	- `./configure`
+	- `make`
+	- `make install`
 
-Say what the step will be
+### Install the prerequisites: Mac (High Sierra)
 
+List of prerequisities we will be installing next:
+- Fuse for macOS (1.5.6)
+
+#### Fuse for macOS
+
+Install the latest version of the Fuse for macOS
+- [Download application](https://sourceforge.net/projects/fuse-for-macosx/)
+- Unpack the tar
+- Read the README for up-to-date installation instructions
+
+## Test the Fuse UI and create your first program
+
+To make sure your installation is working, let's test the Fuse out by writing our first program. We will be using the UI to do that for now. Later on I'll explain how to use your favourite text editor and create tape files.
+
+### Create 'Hello World' program
+
+Open the application and you should be greeted with gray box. You are ready to start typing your first program.
+
+Notice, that the keyboard layout is really wonky and you most probably will need help with that.
+
+First, read this: http://slady.net/Sinclair-ZX-Spectrum-keyboard/
+
+Basically, Spectrum keyboard layout works with "modes". You will get different output from same keys depending on which mode you currently are.
+
+Try to write the following code:
 ```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+10 PRINT "HELLO WORLD"
+RUN
 ```
 
-### And coding style tests
+Instructions how to do that:
+- Type 10 (we'll discuss line numbers later)
+- Press P for PRINT
+- Press Alt+P for "
+- Type HELLO WORLD
+- Press Alt+P for "
+- Type RUN to execute your program
 
-Explain what these tests test and why
+You should see `HELLO WORLD` and `0 OK, 10:1`
 
-```
-Give an example
-```
+Congratulations, your first Spectrum program is now ready!
 
-## Deployment
+Now you can decide what you want to learn next:
+- Keyboard layout aka "Help, how do I type?"
+- Basics of BASIC aka "Help, how to program?"
+- How to code with my favorite editor, create and execute tape files
+- Tools to help you generating Spectrum software
 
-Add additional notes about how to deploy this on a live system
+## Getting started
 
-## Built With
+### Keyboard layout
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+http://slady.net/Sinclair-ZX-Spectrum-keyboard/
 
-## Contributing
+TODO
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+### Basics of BASIC
 
-## Versioning
+TODO
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+### How to code with my favorite editor
 
-## Authors
+TODO
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+### Tools to help you
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+TODO
+
+## Your first project
+
+TODO
+
+## Software used
+
+* [Fuse](http://fuse-emulator.sourceforge.net/) - The Spectrum emulator used
+* [Fuse for macOS](https://sourceforge.net/projects/fuse-for-macosx/) - The Spectrum emulator's Mac version
+* [Fuse utilities](https://sourceforge.net/projects/fuse-emulator/files/fuse-utils/) - Helpful utilities for emulator
+* [Libspectrum](https://sourceforge.net/projects/fuse-emulator/files/libspectrum/) - Helpful input/output utilities for emulator
 
 ## License
 
@@ -131,6 +146,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Everyone who has ever owned Spectrum ZX
