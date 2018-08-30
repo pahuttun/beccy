@@ -1,81 +1,39 @@
 # Beccy - The beginners instructions for Spectrum development
 
-When I was a kid I had Spectrum ZX and I was spending all my evenings developing little games and software. Fast forward 30 years. "Hey, I should create a fun little game for Spectrum", I was thinking while pooping. It cannot be so hard!
+The goal of this project is to explain how to develop programs for Spectrum ZX, home computer from 1980's, with modern computers.
 
-Well, maybe it wasn't so hard, but I was a bit frustrated to get things started and rolling. What are the prerequisities to get my first Hello World program done? What kind of software I need? How do I avoid writing the software with the horrible keyboard layout Spectrum has? How to create and run tape files?
+All the information can be already found from various forums and sites, but the information is scattered. Also, most of the information concentrates on how to program WITH Spectrum ZX, not how to program TO Spectrum ZX. As the Speccy's keyboard layout and programming editor is notoriously horrible, it helps a lot if you can do the hard work with your own computer using IDEs and tools.
 
-This project will answer these questions.
+## Contents
+
+Expectation management:
+- These instructions will tell you how to develop and run programs for Spectrum ZX, "Speccy", the home computer for 1980's
+- You will both learn how to program WITH Speccy and how to program TO Speccy using your own computer.
+- You will learn how to install required emulators and tools (Linux, Mac, Windows)
+
+Index:
+- **Contents** of these instructions
+- **Install** the required software
+- **Hello world**, your first Spectrum ZX program
+- **Work with tapes**, how to save/load tape files
+- **Basics of BASIC**, dive to Spectrum's own programming language
+- **Assembler**, this is where the magic happens
+- **Programming workflow**, instructions how to code with your own computer instead of Speccy
 
 ## Install the required software
 
-The following chapter will walk you through the installation of required software to run your own Spectrum programs.
+Before starting, we need to install required software for Spectrum ZX emulation and programming:
+- Spectrum ZX emulator: Fuse will be used
+- Required libraries and tools for Fuse
+- Additional tools that enables you to program with your own computer
 
-There are instructions for Linux (Ubuntu 18.04 LTS used) and Mac (High Sierra used).
+Installation instructions are here:
+- [Installation instructions for Linux](docs/installation-linux.md)
+- [Installation instructions for Mac](docs/installation-mac.md)
+- [Installation instructions for Windows](docs/installation-windows.md)
 
-The rest of the instructions assume that you are using Mac version. Most probably the Linux version is quite similar.
 
-### Install the prerequisites: Linux
-
-List of prerequisities we will be installing next:
-- libspectrum (1.4.4 used)
-- Fuse (1.5.6 used)
-- Fuse utils (1.4.3 used)
-
-If you want to use virtualized linux, [read these instructions](docs/virtual-linux.md)
-
-#### Libspectrum
-
-Install the latest version of the Libspectrum
-- [Download latest code](http://fuse-emulator.sourceforge.net/libspectrum.php)
-- Unpack the tar
-- Read the README for up-to-date installation instructions
-- Install
-	- `./configure`
-	- `make`
-
-**Problems I encountered**
-
-`configure: error: Glib not found`
-- Run: `./configure --with-fake-glib`
-
-#### Fuse utils
-
-Install the latest version of the Fuse utils
-- [Download latest code](https://sourceforge.net/projects/fuse-emulator/files/fuse-utils/)
-- Unpack the tar
-- Read the README for up-to-date installation instructions
-- Install
-	- `./configure`
-	- `make`
-
-#### Fuse
-
-Install the latest version of the Fuse
-- [Download latest code](https://sourceforge.net/projects/fuse-emulator/files/fuse/)
-- Unpack the tar
-- Read the README for up-to-date installation instructions
-- Install
-	- `./configure`
-	- `make`
-	- `make install`
-
-### Install the prerequisites: Mac (High Sierra)
-
-List of prerequisities we will be installing next:
-- Fuse for macOS (1.5.6)
-
-#### Fuse for macOS
-
-Install the latest version of the Fuse for macOS
-- [Download application](https://sourceforge.net/projects/fuse-for-macosx/)
-- Unpack the tar
-- Read the README for up-to-date installation instructions
-
-## Test the Fuse UI and create your first program
-
-To make sure your installation is working, let's test the Fuse out by writing our first program. We will be using the UI to do that for now. Later on I'll explain how to use your favourite text editor and create tape files.
-
-### Create 'Hello World' program
+## Create your first 'Hello World' program
 
 Open the application and you should be greeted with gray box. You are ready to start typing your first program.
 
@@ -103,37 +61,27 @@ You should see `HELLO WORLD` and `0 OK, 10:1`
 
 Congratulations, your first Spectrum program is now ready!
 
-Now you can decide what you want to learn next:
-- Keyboard layout aka "Help, how do I type?"
-- Basics of BASIC aka "Help, how to program?"
-- How to code with my favorite editor, create and execute tape files
-- Tools to help you generating Spectrum software
 
-## Getting started
+## Work with tapes
 
-### Keyboard layout
+TBD
 
-http://slady.net/Sinclair-ZX-Spectrum-keyboard/
+## Basics of BASIC
 
-TODO
+TBD
 
-### Basics of BASIC
+## Assembler
 
-TODO
+TBD
 
-### How to code with my favorite editor
+## Programming workflow
 
-TODO
+TBD
 
-### Tools to help you
 
-TODO
+## Links
 
-## Your first project
-
-TODO
-
-## Software used
+### Software used
 
 * [Fuse](http://fuse-emulator.sourceforge.net/) - The Spectrum emulator used
 * [Fuse for macOS](https://sourceforge.net/projects/fuse-for-macosx/) - The Spectrum emulator's Mac version

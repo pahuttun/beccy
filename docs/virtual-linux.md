@@ -1,6 +1,6 @@
-# Optional: Install latest Ubuntu for Mac
+# Install Ubuntu 18.04 LTS as virtual Linux for Mac or Windows
 
-Installing virtualized Linux for Mac is quite straightforward and I won't go into the details.
+Installing virtualized Linux for Mac or Windows is quite straightforward and I won't go into the details.
 
 1) Install latest [Virtualbox](https://www.virtualbox.org/)
 2) Create virtual machine
@@ -26,5 +26,4 @@ Installing virtualized Linux for Mac is quite straightforward and I won't go int
 	- Storage
 		- Click picture of DVD under the Controller: IDE
 		- Click picture of DVD near the Opical Drive text and select the Ubuntu ISO you downloaded
-6) Power on and good luck! Obey the Linux instructions for installation
-	- Notice: These instructions assume that you do the Minimal installation when it asks. If you plan to use this virtual Linux for other user than Spectrum emulator development, do the Normal installation
+6) Power on and good luck! Now you can jump to [Fuse linux installation instructions](installation-linux.md)
