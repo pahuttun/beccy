@@ -22,7 +22,15 @@ Install the Fuse with Flatpak:
 
 ## The hard way
 
-### Libspectrum
+The installation flow is simple.
+- Run `./configure` for each program
+- Check the output
+- Solve problems until the summary is (almost) full of yes
+- The proceed to make and make install
+
+Check the "Problems I've encountered" chapter for more information how to solve problems.
+
+### Install Libspectrum
 
 Install the latest version of the Libspectrum (1.4.4 was used)
 - [Download latest code](http://fuse-emulator.sourceforge.net/libspectrum.php)
@@ -35,7 +43,7 @@ Install the latest version of the Libspectrum (1.4.4 was used)
 - Make sure to fix encountered problems before moving to next step
 
 
-### Fuse utils
+### Install Fuse utils
 
 Install the latest version of the Fuse utils
 - [Download latest code](https://sourceforge.net/projects/fuse-emulator/files/fuse-utils/)
@@ -48,7 +56,7 @@ Install the latest version of the Fuse utils
 - Make sure to fix encountered problems before moving to next step
 
 
-### Fuse
+### Install Fuse
 
 Install the latest version of the Fuse
 - [Download latest code](https://sourceforge.net/projects/fuse-emulator/files/fuse/)
@@ -112,6 +120,22 @@ Problem: Running `./configure` shows in summary `libjpeg support: no`
 Solution: Install libjpeg-dev
 
 Run: `sudo apt install libjpeg-dev`
+
+### SOLVED: The hard way - Install Fuse: "Joystick support: no"
+
+Problem: Running `./configure` shows in output `The sdl-config script installed by SDL could not be found`and in summary `Joystick support: no`
+
+Solution: Install libsdl1.2-dev
+
+Run: `sudo apt install libsdl1.2-dev`
+
+### SOLVED: The hard way - Install Fuse: "libxml2 support: no"
+
+Problem: Running `./configure` shows in summary `libxml2 support: no`
+
+Solution: Install libxml2-dev
+
+Run: `sudo apt install libxml2-dev`
 
 ### UNSOLVED: The easy way - Installing Fuse: failed to load module canberra-gtk-module
 

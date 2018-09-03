@@ -1,14 +1,16 @@
 # Instructions how to install Fuse and required tools for Mac
 
-These instructions are ment for people with Mac OS.
+These instructions are ment for people with macOS.
 
 Go with the easy way unless...
 - There is not yet a Mac port for latest version of Fuse
 - And you really really really need a latest version of Fuse
 
+Instructions have been tested with macOS High Sierra
+
 ## The easy way: Mac port
 
-Install the latest version of the Fuse and Fuse utils for Mac OS
+Install the latest version of the Fuse and Fuse utils for macOS
 - [Download application](https://sourceforge.net/projects/fuse-for-macosx/)
 - Unpack the tar
 - Read the README for up-to-date installation instructions
@@ -21,6 +23,14 @@ Install the latest version of these 3 programs in this order by downloading and 
 - [Fuse](http://fuse-emulator.sourceforge.net/)
 
 For every program, obey the installation instructions. Always check the output after `./configure` as it will tell what requirements you are missing.
+
+## The optional way: Virtual linux
+
+Virtual Linux is good choice if you want to encapsulate everything to virtualized environment and/or want to install Fuse from source.
+
+Follow these two easy steps:
+1) [Install virtual Linux](virtual-linux.md)
+2) [Follow installation instructions for Linux](installation-linux.md)
 
 ## Problems I've encountered
 

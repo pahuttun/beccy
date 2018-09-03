@@ -26,4 +26,10 @@ Installing virtualized Linux for Mac or Windows is quite straightforward and I w
 	- Storage
 		- Click picture of DVD under the Controller: IDE
 		- Click picture of DVD near the Opical Drive text and select the Ubuntu ISO you downloaded
-6) Power on and good luck! Now you can jump to [Fuse linux installation instructions](installation-linux.md)
+6) Power on and go through the Ubuntu installation
+7) Finalize installation
+	- Install Guest Additions to enable shared clipboard
+		- When your box is running, go to VirtualBox menu and select Devices => Insert Guest Additions CD image...
+		- Follow on-screen instructions and reboot when ready
+
+ Now you can jump to [Fuse linux installation instructions](installation-linux.md)
