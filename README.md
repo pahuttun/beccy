@@ -134,8 +134,7 @@ To actually store the bits, you need to save the virtual tape to tape file.
 Do following:
 
 - Media => Tape => Write
-- Notice: If you get error `fuse: error: libspectrum: skip_block: skipping RLE Pulse (ID 0x100); conversion almost certainly won't work`, do following:
-	- TODO
+- Use extension .tzx
 
 ### Tape files
 
